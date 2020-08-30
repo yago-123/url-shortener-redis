@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<center>
+			<form action="/" method="POST">
+				<label placeholder ="http://" for="url">Introduce your url:</label><br>
+				<input type="text" id="url-id" name="url"><br>
+		
+				<input type="submit" value="Short it!">
+			</form>
+
+			{{ if .Err }}
+				<center>{{.Err}}</center>
+			{{ else }} 
+				<center>{{.NewShortcut}} </center>
+			{{ end }} 
+		</center>
+	</body>
+</html>
