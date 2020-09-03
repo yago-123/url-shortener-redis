@@ -1,0 +1,13 @@
+version: '3'
+
+services: 
+    redis-server: 
+        image: redis 
+    url-shortener: 
+        build: . 
+        ports: 
+            - "8080:8080"
+        # depends_on: 
+        #   - redis-server
+        links: 
+            - redis-server
